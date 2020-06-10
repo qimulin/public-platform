@@ -1,5 +1,7 @@
 package xi.chun.lin;
 
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -20,4 +22,9 @@ public class EurekaFeignApplication {
 		SpringApplication.run(EurekaFeignApplication.class, args);
 	}
 
+	//切换默认的策略
+	@Bean
+	public IRule myRule(){
+		return new RandomRule();
+	}
 }
