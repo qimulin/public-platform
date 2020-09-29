@@ -1,0 +1,14 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    # 这里要对应spring cloud config配置文件命名规则{application}-{profile}.yml的application
+    name: config-client
+  cloud:
+    config:
+      # 获取配置文件的分支，默认是master。如果是是本地获取的话，则无用。
+#      label: master
+      profile: dev
+      # config server地址
+      uri: http://localhost:8081

@@ -13,7 +13,7 @@
 
 	<parent>
 		<groupId>xi.chun.lin</groupId>
-		<artifactId>public-platform</artifactId>
+		<artifactId>cloud-base</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
@@ -29,10 +29,12 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<version>${eureka.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${boot.test.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -43,7 +45,7 @@
 
 	</dependencies>
 
-	<dependencyManagement>
+<!--	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
@@ -53,7 +55,7 @@
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
-	</dependencyManagement>
+	</dependencyManagement>-->
 
 	<build>
 		<plugins>
