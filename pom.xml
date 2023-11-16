@@ -22,14 +22,103 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<boot.starter.version>2.2.2.RELEASE</boot.starter.version>
+		<boot.starter.redis.version>1.4.7.RELEASE</boot.starter.redis.version>
+		<boot.test.version>1.5.4.RELEASE</boot.test.version>
+		<eureka.version>2.2.5.RELEASE</eureka.version>
+		<feign.version>1.4.7.RELEASE</feign.version>
+		<ribbon.version>1.4.7.RELEASE</ribbon.version>
+		<hystrix.version>1.4.7.RELEASE</hystrix.version>
+		<config.server.version>2.2.0.RELEASE</config.server.version>
+		<starter.config.version>2.2.1.RELEASE</starter.config.version>
+		<junit.version>4.12</junit.version>
+		<mysql.connector.java.version>5.1.39</mysql.connector.java.version>
+		<lombok.version>1.18.10</lombok.version>
+		<log4j.version>1.2.17</log4j.version>
+		<boot.starter.dubbo.version>1.0.0</boot.starter.dubbo.version>
 	</properties>
 
 	<modules>
+		<module>modules/cloud-base</module>
+		<module>modules/config-client</module>
+		<module>modules/config-server</module>
+		<module>modules/dubbo-client</module>
+		<module>modules/dubbo-provider</module>
 		<module>modules/eureka-provider</module>
 		<module>modules/eureka-feign</module>
 		<module>modules/eureka-ribbon</module>
 		<module>modules/eureka-server</module>
+		<module>modules/java-basic</module>
+		<module>modules/mq-active-mq</module>
+		<module>modules/service-zuul</module>
+		<module>modules/spring-security-demo</module>
+		<module>modules/spring-session-redis</module>
 	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter</artifactId>
+				<version>${boot.starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${boot.starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>${boot.starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-aop</artifactId>
+				<version>${boot.starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-redis</artifactId>
+				<version>${boot.starter.redis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-test</artifactId>
+				<version>${boot.test.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.connector.java.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.dubbo.springboot</groupId>
+				<artifactId>spring-boot-starter-dubbo</artifactId>
+				<version>${boot.starter.dubbo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+				<version>${eureka.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<dependencies>
 		<dependency>
@@ -56,19 +145,16 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-redis</artifactId>
-			<version>1.4.7.RELEASE</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-test</artifactId>
-			<version>1.5.4.RELEASE</version>
 		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -76,21 +162,12 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.39</version>
 		</dependency>
 
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.cloud</groupId>-->
-			<!--<artifactId>spring-cloud-starter-ribbon</artifactId>-->
-			<!--<version>RELEASE</version>-->
-		<!--</dependency>-->
-
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.cloud</groupId>-->
-			<!--<artifactId>spring-cloud-starter-feign</artifactId>-->
-			<!--<version>RELEASE</version>-->
-		<!--</dependency>-->
-
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
