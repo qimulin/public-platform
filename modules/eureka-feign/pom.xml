@@ -56,14 +56,6 @@
 <!--		</dependencies>-->
 <!--	</dependencyManagement>-->
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 	<!--此处踩坑，不能完全导入spring-cloud-starter-feign-->
 	<repositories>
