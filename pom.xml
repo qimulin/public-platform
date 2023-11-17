@@ -155,7 +155,6 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<scope>test</scope>
 		</dependency>
 
 		<!-- mysql 驱动程序, 测试使用 -->

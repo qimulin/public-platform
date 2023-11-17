@@ -15,6 +15,7 @@
 		<groupId>xi.chun.lin</groupId>
 		<artifactId>public-platform</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
 	<properties>
@@ -31,7 +32,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>RELEASE</version>
 		</dependency>
 	</dependencies>
 

@@ -15,6 +15,7 @@
 		<groupId>xi.chun.lin</groupId>
 		<artifactId>public-platform</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
 	<properties>
@@ -31,10 +32,15 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 			<version>2.0.1.RELEASE</version>
 		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-starter-feign</artifactId>-->
+<!--			<version>${feign.version}</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-feign</artifactId>
-			<version>${feign.version}</version>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>2.1.3.RELEASE</version>
 		</dependency>
 	</dependencies>
 
